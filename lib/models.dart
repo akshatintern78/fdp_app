@@ -29,6 +29,7 @@ class Receipt {
     required this.amount,
     required this.amountInWords,
     required this.paymentRef,
+    this.fundraiserName = '',
     required this.hasSignature,
     this.signatureBase64,
     required this.createdAt,
@@ -43,6 +44,7 @@ class Receipt {
   final double amount;
   final String amountInWords;
   final String paymentRef;
+  final String fundraiserName;
   final bool hasSignature;
   final String? signatureBase64;
   final String createdAt;
@@ -66,6 +68,7 @@ class Receipt {
       amount: _asDouble(json['amount']),
       amountInWords: json['amountInWords'] as String,
       paymentRef: json['paymentRef'] as String,
+      fundraiserName: (json['fundraiserName'] ?? '').toString(),
       hasSignature: json['hasSignature'] == true,
       signatureBase64: json['signatureBase64'] as String?,
       createdAt: json['createdAt'].toString(),
