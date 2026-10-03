@@ -34,7 +34,7 @@ class _FdpAppState extends State<FdpApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Chapersons',
+      title: 'Chapersons Foundation',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF6B3F24)),

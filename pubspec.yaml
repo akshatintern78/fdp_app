@@ -42,6 +42,7 @@ dependencies:
   signature: ^5.5.0
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.14.4
   flutter_test:
     sdk: flutter
 
@@ -56,6 +57,14 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: ../fdp-web/src/assets/Logo.jpeg
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: ../fdp-web/src/assets/Logo.jpeg
+  adaptive_icon_foreground_inset: 0
+
 flutter:
 
   # The following line ensures that the Material Icons font is
