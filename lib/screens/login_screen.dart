@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../api.dart';
+import '../core/network/api_constants.dart';
 import '../session.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -204,7 +206,16 @@ class _LoginScreenState extends State<LoginScreen> {
                             Expanded(child: Divider(color: _line, indent: 12)),
                           ],
                         ),
-                        const SizedBox(height: 12),
+                        const SizedBox(height: 8),
+                        TextButton(
+                          onPressed: () {
+                            launchUrl(
+                              Uri.parse('${ApiConstants.baseUrl}/privacy-policy'),
+                              mode: LaunchMode.externalApplication,
+                            );
+                          },
+                          child: const Text('Privacy policy'),
+                        ),
                       ],
                     ),
                   ),

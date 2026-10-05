@@ -1,4 +1,4 @@
-package com.example.fdp_app
+package com.imt.payreceipt
 
 import io.flutter.embedding.android.FlutterActivity
 
