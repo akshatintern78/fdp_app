@@ -63,7 +63,13 @@ class Api {
     };
   }
 
-  Uri _uri(String path) => Uri.parse('${ApiConstants.baseUrl}$path');
+  Uri _uri(String path) {
+    var base = ApiConstants.baseUrl.replaceAll(RegExp(r'/+$'), '');
+    if (base.endsWith('/api') && path.startsWith('/api/')) {
+      base = base.substring(0, base.length - 4);
+    }
+    return Uri.parse('$base$path');
+  }
 
   Future<Map<String, dynamic>> _send(String path, {String method = 'GET', Map<String, dynamic>? body, bool auth = true}) async {
     final headers = _headers(json: body != null);
